@@ -1,0 +1,42 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* create additional rules below:  */
+
+section {
+   display: flex;
+    height: 100vh;
+    border: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#home {
+    background-color: lightblue;
+}
+
+#bio {
+    background-color: cornflowerblue;
+    color: aliceblue;
+}
+
+#portfolio {
+    background-color: blue;
+    color: aliceblue;
+}
+
+#contact {
+    background-color: darkblue;
+    color: aliceblue;
+}
