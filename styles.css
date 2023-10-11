@@ -1,19 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+
 *{
     box-sizing: border-box;
 }
 
 header {
-    background-color: #B39BF5;
+    background-color: #71598F;
     font-weight: bold;
     padding: 30px;
 }
 
 body {
+   
+    background-color: #B29af5;
     margin: 0px;
-    font-family: Arial, sans-serif;
+    font-family: 'Mooli', sans-serif;
+   
 }
 
 p, a, li {
     line-height: 1.5em;
     font-size: 1.1em;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "Tutorials Homework Homework"
+    "Inspiration Exercises Quizzes";
+    height: 100vh;
+}
+
+#tutorials {
+    grid-area: Tutorials;
+}
+
+#homework {
+    grid-area: Homework;
+}
+
+#inspiration {
+    grid-area: Inspiration;
+}
+
+#class-exercises {
+    grid-area: Exercises;
+}
+
+#quizzes {
+    grid-area: Quizzes;
+}
+
+@media screen and (max-width: 800px) {
+    
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "Tutorials Homework"
+        "Inspiration Homework"
+        "Exercises Homework"
+        "Quizzes Homework";
+    }
+
+    
+
 }
