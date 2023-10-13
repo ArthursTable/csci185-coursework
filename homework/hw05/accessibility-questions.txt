@@ -2,9 +2,10 @@ Please answer the following accessibility questions:
 
 
 1. What accessibility corrections did you have to make?
-
+    Missing alt texts 
 
 2. Do you think your website is usable if you turn off the CSS? Why or why not?
-
+    I don't think so, as that'd make it a lot harder to navigate
 
 3. Is your site is tabbable? In other words, without the use of the mouse, are all the links and buttons accessible using the tab key?
+    My site is mostly tabbable, however it does not allow for use of buttons.

@@ -83,10 +83,18 @@ footer {
 /***************************/
 
 /* Your Code Here */
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    padding-left: 10px;
+}
 
-
-
-
+#sidebar>.selected {
+    border-left: solid 3px #1DB954;
+}
 
 
 /********************************/
@@ -95,10 +103,41 @@ footer {
 
 /* Your Code Here */
 
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 20px;
+    padding: 10px;
+}
+ #upgrade{
+    border: solid 1px white;
+    border-radius: 120px;
+    padding: 10px 25px;
+    text-transform: uppercase;
+ }
+#profile {
+    font-weight: bold;
+    background-color: #222;
+    border-radius: 120px;
+    padding: 10px 25px;
+    text-transform: uppercase;
+ }
 
+ nav {
+    display: flex;
+    column-gap: 20px;
+    padding: 10px;
+ }
 
+ nav > a {
+    text-transform: uppercase;
+    font-weight: 500;
+ }
 
-
+ nav>.selected {
+    border-bottom: solid 3px #1DB954;
+ }
 
 /*************************/
 /* Part C: Artists Panel */
@@ -106,15 +145,87 @@ footer {
 
 /* Your Code Here */
 
+#featured-content {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+}
 
+.artist-card img {
+    width: 100%;
+    border-radius: 50%;
+}
 
+.artist-card {
+    background-color: #222;
+    padding: 10px;
+    border-radius: 5%;
+    padding-bottom: 60px;
+}
 
+h2 {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.artist-card p {
+    margin: 0;
+    color: lightgray;
+}
+
+.artist-card button {
+    display: none;
+}
 
 /*****************/
 /* Mobile Design */
 /*****************/
-@media screen and (max-width: 1000px) {}
+@media screen and (max-width: 1000px) {
+
+    #featured-content {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;  
+    }
+
+    .artist-card {
+        padding-bottom: 0;
+        padding: 20px;
+    }
+    h2 {
+        font-weight: bold;
+        font-size: 1em;
+    }
+}
 
 
 
-@media screen and (max-width: 700px) {}
+
+@media screen and (max-width: 700px) {
+
+    main {
+        grid-template-columns: 100%;
+    }
+    #sidebar {
+        display: none;
+    }
+    nav {
+        grid-column: 1 / 2;
+    }
+
+
+
+    #upgrade {
+        display: none;
+    }
+
+    #featured-content {
+        grid-column: 1 / 2;
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;  
+        }
+}
