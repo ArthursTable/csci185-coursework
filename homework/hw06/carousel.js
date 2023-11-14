@@ -21,6 +21,7 @@ function showImage() {
     console.log('Show image');
     const img = document.querySelector('.current-photo img');
     img.src = photos[idx];
+    document.querySelector('.caption').innerHTML = `Image ${idx+1} of 10`
 }
 
 
@@ -32,7 +33,13 @@ function showImage() {
 */
 function forward() {
     console.log('forward');
-    idx += 1;
+
+    if (idx < 9) {
+        idx += 1;
+    } else {
+        idx = 0
+    }
+
     showImage();
 }
 
@@ -49,7 +56,7 @@ function back() {
         idx -= 1;
     } else {
         console.log('back');
-        idx = 10;
+        idx = 9;
     }
     showImage();
 }
