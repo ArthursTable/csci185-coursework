@@ -28,7 +28,7 @@ main {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: 
-    "Tutorials Homework Homework"
+    "Tutorials Homework Project"
     "Inspiration Exercises Quizzes";
     height: 100vh;
 }
@@ -39,6 +39,10 @@ main {
 
 #homework {
     grid-area: Homework;
+}
+
+#project {
+    grid-area: Project;
 }
 
 #inspiration {
